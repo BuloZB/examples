@@ -1,0 +1,27 @@
+name: "Report: Client Version Usage"
+
+on:
+  workflow_dispatch:
+  workflow_call:
+
+jobs:
+  analyze-client-versions:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Install Poetry
+        uses: snok/install-poetry@v1
+
+      - name: Install dependencies
+        run: |
+          poetry install --with dev --no-root
+
+      - name: Run version census
+        run: |
+          poetry run python3 .github/scripts/version-census.py
