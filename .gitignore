@@ -25,3 +25,8 @@ question_answering/tmp
 
 # secrets
 .env
+examples.egg-info/
+
+# worktrees
+.worktrees/
+.env

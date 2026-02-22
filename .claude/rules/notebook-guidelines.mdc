@@ -1,0 +1,28 @@
+---
+alwaysApply: true
+---
+# Notebook Guidelines
+
+Follow comprehensive standards in **`.ai/notebook-standards.md`**.
+
+## Key Principles
+
+**Structure:**
+- Start with markdown introduction and prerequisites
+- Organize with clear section headers
+- End with cleanup cells (if creates resources)
+
+**Code Quality:**
+- PEP 8 style, meaningful names, docstrings
+- All imports in first code cell
+- All dependencies pinned with exact versions
+
+**Documentation:**
+- Explain "why" before code
+- Keep notebooks focused on single topic
+
+**Execution:**
+- Must run cleanly with "Restart Kernel and Run All"
+- No hardcoded secrets (use environment variables)
+
+**For complete details:** See **`.ai/notebook-standards.md`**
